@@ -36,6 +36,9 @@ read_self_all:
 	int $0x13
 	jc read_self_all
 
+	cli
+	lgdt
+
 	jmp .
 
 	.org 0x1fe		// 510
